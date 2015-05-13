@@ -15,7 +15,8 @@ Enigma crackCode(String clear, String cipher, String setting, List<int> leftOpts
 
 /// Returns a valid Plugboard for the given Enigma components
 /// Returns null if no such Plugboard exists
-Plugboard findPlugboard(left, middle, right, reflect, clear, cipher, setting) {
+Plugboard findPlugboard(Rotor left, Rotor middle, Rotor right, 
+        Reflector reflect, String clear, String cipher, String setting) {
     // Your Code Here
     return null;
 }
