@@ -1,3 +1,5 @@
 *.class
 helpers.dart
 tester.dart
+*.pyc
+__pycache__/
