@@ -1,0 +1,49 @@
+{
+    "name": "Enigma Project - Python",
+    "owner": "dart-targets",
+    "id": "enigma-python",
+    "files": [
+        "enigma.py", 
+        "bombe.py"
+    ],
+    "language": "python",
+    "_comment": "If `python` does not run the version of Python you want, edit the above property to the command you want to use.",
+    "tests": [
+        {
+            "name": "Plugboard",
+            "args": "plugboard",
+            "output": "",
+            "run": "tests.py"
+        },
+        {
+            "name": "Simple Enigma",
+            "args": "simple",
+            "output": "",
+            "run": "tests.py"
+        },
+        {
+            "name": "Moderate Enigma",
+            "args": "moderate",
+            "output": "",
+            "run": "tests.py"
+        },
+        {
+            "name": "Complex Enigma",
+            "args": "complex",
+            "output": "",
+            "run": "tests.py"
+        },
+        {
+            "name": "Bombe Plugboard",
+            "args": "bombe_plug",
+            "output": "",
+            "run": "tests.py"
+        },
+        {
+            "name": "Full Bombe",
+            "args": "bombe",
+            "output": "",
+            "run": "tests.py"
+        }
+    ]
+}

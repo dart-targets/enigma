@@ -25,7 +25,10 @@ public class TestEnigma {
             output += p.translate('S');
             output += p.translate('Q');
             output += p.translate('A');
-            System.out.print(output);
+            String expect = "APERZ";
+            if (!output.equals(expect)) {
+                System.out.print("Expected " + expect + ", got " + output);
+            }
         } else if (args[0].equals("simple")) {
             Plugboard p = new Plugboard();
             Rotor left = new Rotor(1, 1);
@@ -33,9 +36,11 @@ public class TestEnigma {
             Rotor right = new Rotor(3, 1);
             Enigma enigma = new Enigma(p, Reflector.B, left, middle, right);
             String input  = "TARGETS";
-            String expect = "ODXARRV";
             String output = enigma.translateMessage(input, "AAA");
-            System.out.print(output);
+            String expect = "ODXARRV";
+            if (!output.equals(expect)) {
+                System.out.print("Expected " + expect + ", got " + output);
+            }
         } else if (args[0].equals("moderate")) {
             Plugboard p = new Plugboard();
             p.addPlug('A', 'Z');
@@ -48,7 +53,9 @@ public class TestEnigma {
             String input  = "TARGETS";
             String expect = "MGDUGBF";
             String output = enigma.translateMessage(input, "AAA");
-            System.out.print(output);
+            if (!output.equals(expect)) {
+                System.out.print("Expected " + expect + ", got " + output);
+            }
         } else if (args[0].equals("complex")) {
             Plugboard p = new Plugboard();
             p.addPlug('A', 'Z');
@@ -62,7 +69,9 @@ public class TestEnigma {
             String input  = "TARGETS";
             String expect = "NDMKPXM";
             String output = enigma.translateMessage(input, "MZN");
-            System.out.print(output);
+            if (!output.equals(expect)) {
+                System.out.print("Expected " + expect + ", got " + output);
+            }
         } else if (args[0].equals("bombe_plug")) {
             Plugboard p = randomPlugboard();
             Rotor[] rotors = randomRotors();

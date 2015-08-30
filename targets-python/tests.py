@@ -19,11 +19,13 @@ def test_plugboard():
     p.add_plug("S", "E")
     output = ""
     output += p.translate("Z")
-    output += p.translate("P");
-    output += p.translate("S");
-    output += p.translate("Q");
-    output += p.translate("A");
-    print(output)
+    output += p.translate("P")
+    output += p.translate("S")
+    output += p.translate("Q")
+    output += p.translate("A")
+    expected = "APERZ"
+    if output != expected:
+        print("Expected {0}, got {1}".format(expected, output))
     
 def test_simple():
     p = Plugboard()
@@ -31,7 +33,10 @@ def test_simple():
     middle = Rotor(2, 1)
     right = Rotor(3, 1)
     enig = Enigma(p, reflector_b, left, middle, right)
-    print(enig.translate_message("TARGETS", "AAA"))
+    output = enig.translate_message("TARGETS", "AAA")
+    expected = "ODXARRV"
+    if output != expected:
+        print("Expected {0}, got {1}".format(expected, output))
     
 def test_moderate():
     p = Plugboard()
@@ -42,7 +47,10 @@ def test_moderate():
     middle = Rotor(5, 5)
     right = Rotor(1, 1)
     enig = Enigma(p, reflector_c, left, middle, right)
-    print(enig.translate_message("TARGETS", "AAA"))
+    output = enig.translate_message("TARGETS", "AAA")
+    expected = "MGDUGBF"
+    if output != expected:
+        print("Expected {0}, got {1}".format(expected, output))
     
 def test_complex():
     p = Plugboard()
@@ -54,7 +62,10 @@ def test_complex():
     middle = Rotor(5, 3)
     right = Rotor(1, 14)
     enig = Enigma(p, reflector_c, left, middle, right)
-    print(enig.translate_message("TARGETS", "MZN"))
+    output = enig.translate_message("TARGETS", "MZN")
+    expected = "NDMKPXM"
+    if output != expected:
+        print("Expected {0}, got {1}".format(expected, output))
     
 def test_bombe_plug():
     p = random_plugboard()

@@ -1,0 +1,60 @@
+{
+    "name": "Enigma Project - Java",
+    "owner": "dart-targets",
+    "id": "enigma-java",
+    "files": [
+        "Enigma.java", 
+        "Plugboard.java", 
+        "Reflector.java", 
+        "Rotor.java",
+        "Bombe.java",
+        "*.java",
+        "!TestEnigma.java",
+        "!EnigmaCLI.java"
+    ],
+    "language": "java",
+    "tests": [
+        {
+            "name": "Plugboard",
+            "args": "plugboard",
+            "output": "",
+            "run": "TestEnigma.java",
+            "points": -1
+        },
+        {
+            "name": "Simple Enigma",
+            "args": "simple",
+            "output": "",
+            "run": "TestEnigma.java",
+            "points": -1
+        },
+        {
+            "name": "Moderate Enigma",
+            "args": "moderate",
+            "output": "",
+            "run": "TestEnigma.java",
+            "points": -1
+        },
+        {
+            "name": "Complex Enigma",
+            "args": "complex",
+            "output": "",
+            "run": "TestEnigma.java",
+            "points": -1
+        },
+        {
+            "name": "Bombe Plugboard",
+            "args": "bombe_plug",
+            "output": "",
+            "run": "TestEnigma.java",
+            "points": -1
+        },
+        {
+            "name": "Full Bombe",
+            "args": "bombe",
+            "output": "",
+            "run": "TestEnigma.java",
+            "points": -1
+        }
+    ]
+}
