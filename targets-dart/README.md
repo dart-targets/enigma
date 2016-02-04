@@ -1,4 +1,4 @@
-## Engima ##
+## Enigma ##
 
 This is a sample assignment to demonstrate Targets
 
